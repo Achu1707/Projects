@@ -25,19 +25,18 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Fig 1. Solver selection</em></p>
 <p><strong>Procedure</strong></p>
 <p>1) First we have to copy the necessary icoFoam folder(cavity) from tutorials to run folder. Openfoam doesn'tallow us to do the simulation in tutorial folder so we are copying it to run folder. The step by step&nbsp; procedure on how I did this was dispayed in the image below.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid0_1700160251.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img2.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 2. Terminal window (to copy tutorial files to run folder)</em></p>
 <p>2) Here we copied the cavity folder from icofoam, renamed as cavity_test and pasted in run folder. Inside this, we can see 3 sub folders : 0, constant and system.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid1_1700160251.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img3.png?raw=true" alt="" /></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Fig 3. Terminal window (to open blockMeshDict)</em></p>
-<p>4) Inside system folder there is text file called blockMeshDict. It can be opened using gedit command. This file contains geometry and mesh options of the blockmesh for a sample model. Here, I changed the geometry according to the question.</p>
+<p>3) Inside system folder there is text file called blockMeshDict. It can be opened using gedit command. This file contains geometry and mesh options of the blockmesh for a sample model. Here, I changed the geometry according to the question.</p>
 <p>The backward facing step was divided into 5 blocks as shown below.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid2_1700160250.png" alt="" width="646" height="203" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img4.png?raw=true" alt="" width="646" height="203" /></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<em> Fig 4. Block numbering</em></p>
-<p>The following numbering system were assumed for providing the appropriate vertices values for geometry setup and boundary.<img src="file:///C:/Users/singu/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg" alt="A diagram of a triangle with lines
+<p>The following numbering system were assumed for providing the appropriate vertices values for geometry setup and boundary</p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img5.jpg?raw=true" width="636" height="254" border="0" /></p>
 
-Description automatically generated with medium confidence" width="636" height="254" border="0" /></p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid3_1700160251.jpg" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 5. Vertices numbering for each blocks</em></p>
 <p><em>Source:&nbsp; Image taken from text help for blockMesh in Content section</em></p>
 <p><strong>Case 1 (Grading factor =1)</strong></p>
@@ -180,7 +179,7 @@ mergePatchPairs
 
 // ************************************************************************* //
 </code></pre>
-<p>Explanation</p>
+<p><strong>Explanation</strong></p>
 <ol>
 <li>The words inside the /*...*/ are called as comments.</li>
 <li>Next the class FoamFile is called as dictionary which contains key value pairs. Value is 2.0.</li>
@@ -191,10 +190,11 @@ mergePatchPairs
 <li>Next the boundaries were assigned, inlet, oulet, upperWall, lowerWall, front and Back.</li>
 </ol>
 <p>The numbering were assigned based on right hand thumb rule. The thumb represents the direction of normal to the each surface and the fingers denote the direction of order of each vertices of the block. It may be confusing whether the direction maybe clockwise or anticlockwise. So a convention was followed here which say, if you look the surface from outside the block, the direction is anti clockwise, if you look the surface from inside the block, the direction is clockwise.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid4_1700768053.png" alt="" width="1030" height="560" /></p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid5_1700768053.png" alt="" width="909" height="270" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img6a.png?raw=true" alt="" width="1030" height="560" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img6b.png?raw=true" alt="" width="909" height="270" /></p>
+
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 6. a) Numbering and direction selection for looking the surface for each boundaries. b) boundary specification</em></p>
-<p>Control dict</p>
+<p><strong>Control dict</strong></p>
 <p>After editing the blockMeshDict file, control dict file is opened which is in the same system folder. Here we can give start time, end time, deltaT (time step) etc. Here start time as 0, end time as 2 and delta T as 0.00001 were assumed. The deltaT was chosen such that the CFL number should be less than 1. deltaT was arbitararly chosen first and while running the solver ,we can check if it is okay or not. If the solver stops before the end time, we have to change the deltaT as CFL no. would have crossed 1.</p>
 <p>&nbsp;</p>
 <pre class="language-cpp"><code>/*--------------------------------*- C++ -*----------------------------------*\
@@ -356,13 +356,13 @@ boundaryField
 // ************************************************************************* //</code></pre>
 <p>&nbsp;</p>
 <p>The initial and boundary conditions were set up. After going back to cavity_test folder, blockMesh was typed to create the mesh.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/polymesh_1700232435.jpg" alt="" width="1219" height="629" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img7.jpg?raw=true" alt="" width="1219" height="629" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 7. Creating mesh</em></p>
 <p>Then the mesh was checked if it was correct.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/checkMesh_1700232461.jpg" alt="" width="1206" height="596" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img8.jpg?raw=true" alt="" width="1206" height="596" /></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>&nbsp; Fig 8. Checking the mesh</em></p>
 <p>&nbsp;Then paraFoam was typed in commandline to view the mesh. The mesh plot I got was,</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/main5_1700232565.jpg" alt="" width="1387" height="203" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img9.jpg?raw=true" alt="" width="1387" height="203" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 9. Mesh of backward step (for mesh points (200 20 1))</em></p>
 <p>&nbsp;The mesh didn't look uniform as the size of the some block differs. So I changed the grid point values in blockmeshDict file accordingly as given below,</p>
 <pre class="language-cpp"><code>blocks
@@ -390,25 +390,25 @@ boundaryField
     simpleGrading (1 1 1)
 );</code></pre>
 <p>&nbsp;Then the mesh was viewed in paraFoam.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid0_1700514220.png" alt="" width="1018" height="209" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img10.png?raw=true" alt="" width="1018" height="209" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 10. Mesh of backward step (for mesh points altered to get uniform mesh)</em></p>
 <p>&nbsp;</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid1_1700514220.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img11.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 11. Mesh of backward step (zoomed view) (for mesh points altered to get uniform mesh)</em></p>
 <p>Now the command icoFoam was run. When the solver reached the end time, it stopped. Now the paraFoam was used to visualize the plots.</p>
-<p>In paraview, the play button was clicked to show how the velocity varies when time increases. The velocity plot at time 0.398 s was shown below,</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid5_1700517245.png" alt="" /></p>
+<p>In paraview, the play button was clicked to show how the velocity varies when time increases. The velocity plot at time 0.4 s was shown below,</p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img12.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 12. Velocity distribution (case 1, GF=1)</em></p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid6_1700517245.png" alt="" width="946" height="400" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img13.png?raw=true" alt="" width="946" height="400" /></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Fig 13. Velocity distribution near the step (case 1, GF=1)</em></p>
 <p>The pressure plot at time 0.4 s as shown below,</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid7_1700517245.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img14.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 14. Pressure distribution</em></p>
 <p>Go to Filters &rarr; Data Analysis &rarr; Plot over line to show the velocity distribution at 0.085 m from inlet.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid8_1700517245.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img15a.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 15. a) Plot over line window</em></p>
 <p>&nbsp;</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid0_1700761346.png" alt="" width="650" height="501" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img15b.png?raw=true" alt="" width="650" height="501" /></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em> Fig 15. b) Velocity profile at 0.085 m from inlet at t=0 upto t=0.02s</em></p>
 <p><strong>Case 2 (With grading factor 0.2)</strong></p>
 <p>After applying the grading factor of 0.2 (for region near the walls) in the blockMeshDict file,</p>
@@ -437,35 +437,35 @@ boundaryField
     simpleGrading (8 0.2 1)
 );</code></pre>
 <p>After saving the blockmeshdict file, the blockmesh and checkmesh command were run and visualised the mesh in paraview,</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid10_1700526314.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img16.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 16. Mesh of backward step (with grading factor 0.2)</em></p>
 <p>The zoom view.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid11_1700526314.png" alt="" width="1017" height="342" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img17.png?raw=true" alt="" width="1017" height="342" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 17. Mesh of backward step with fine mesh near the step (Zoomed view)<br /></em></p>
 <p>Then in command window,icoFoam was run. When the solver reached the end time, it stopped. Now the paraFoam was used to visualize the plots.In paraview, the play button was clicked to show how the velocity varies when time increases. The velocity plot at time 0.4 s was shown below,</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid17_1700528973.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img18.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 18. Velocity distribution (case 2, GF=0.2)</em></p>
 <p>The velocity distribution near the step,</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid18_1700528974.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img19.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 19. Velocity distribution near the step (case 2, GF=0.2)</em></p>
 <p>The pressure plot,</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid19_1700528974.png" alt="" /></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img20.png?raw=true" alt="" /></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 20. Pressure distribution (case 2, GF=0.2)</em></p>
 <p>The velocity profile at 0.085 m from inlet.</p>
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid1_1700761347.png" alt="" /></p>
-<p><em>&nbsp;Fig 21. b) Velocity profile at 0.085 m from inlet at t=0 upto t=0.02s (Case 2 GF=0.2)<br /></em></p>
+<p><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img21.png?raw=true" alt="" /></p>
+<p><em>&nbsp;Fig 21. Velocity profile at 0.085 m from inlet at t=0 upto t=0.02s (Case 2 GF=0.2)<br /></em></p>
 <p><strong>Results</strong></p>
 <p>Comparison of velocity plot for case 1 and 2</p>
 <p><strong>Case 1 (GF =1)<br /></strong></p>
-<p><strong><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid16_1700526314.png" alt="" /></strong></p>
+<p><strong><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img22.png?raw=true" alt="" /></strong></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 22. Velocity distribution with uniform mesh (case 1, GF=1)</em></p>
 <p>Here we can clearly see that the velocity didn't change much near the step, after 0.085 m it gradually decreases. The mesh is uniform and smooth here. The velocity also undergoes gradual change.</p>
 <p><strong>Case 2(GF=0.2)</strong></p>
-<p><strong><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid21_1700528974.png" alt="" width="923" height="425" /></strong></p>
+<p><strong><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img23.png?raw=true" alt="" width="923" height="425" /></strong></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 23. Velocity distribution (case 2, GF=0.2)</em></p>
 <p>&nbsp;Here, we can clearly see that the mesh is finer near the step wall. The velocity changes very well near the step and decreases further as length increases.</p>
 <p><strong>Velocity profile comparison at 0.085 m from inlet</strong></p>
-<p><strong><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid2_1700761347.png" alt="" /></strong></p>
+<p><strong><img src="https://github.com/Achu1707/Skill-lync-project/blob/main/img24.png?raw=true" alt="" /></strong></p>
 <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fig 24. Velocity profile comparison for case 1 and 2 at 0.085 m from inlet</em></p>
 <p>In this plot, in case 1 we can see that the velocity increases exponentially hits the peak value and decreases gradually. The peak value of velocity is 1.1 m/s (around 0.014 s) at 0.085 m which is larger the the inlet velocity (1m/s).</p>
 <p>In case 2, the peak value is 0.76 m/s (around 0.0102 s) which is smaller than the inlet velocity (1m/s).</p>
