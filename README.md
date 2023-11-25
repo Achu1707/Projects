@@ -20,7 +20,7 @@
 <p>&nbsp;</p>
 <p><strong>Answer</strong></p>
 <p>In the question it is clearly mentioned to simulate an<u> incompressible-laminar-viscous flow</u> through the backward facing step geometry where the simulation should be <u>transient</u>. So the suitable solver will be <strong>icoFoam</strong>. I selected this solver based on information given in the <a href="https://www.openfoam.com/documentation/user-guide/a-reference/a.1-standard-solvers" target="_blank" rel="noopener">Openfoam website</a> .</p>
-![img0](https://github.com/Achu1707/Skill-lync-project/assets/150841023/420f1d9b-9d9c-4dcc-9129-21368b743b15)
+<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/blobid3_1700768053.png" alt="" width="873" height="60" /></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Fig 1. Solver selection</em></p>
 <p><strong>Procedure</strong></p>
 <p>1) First we have to copy the necessary icoFoam folder(cavity) from tutorials to run folder. Openfoam doesn'tallow us to do the simulation in tutorial folder so we are copying it to run folder. The step by step&nbsp; procedure on how I did this was dispayed in the image below.</p>
