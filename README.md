@@ -12,7 +12,7 @@
 <p><strong>Boundary condition specification</strong></p>
 <p>The domain specifications are provided in the following figure.</p>
 ![img0](https://github.com/Achu1707/Skill-lync-project/assets/150841023/420f1d9b-9d9c-4dcc-9129-21368b743b15)
-<p><img src="https://d3ocdjih6hdmey.cloudfront.net/lms-ci3/challenge/assets/2023/11/IMG_1700844032.jpg" alt="" width="807" height="273" /></p>
+
 <p><strong>Desired output</strong></p>
 <ul>
 <li>Measure the velocity profile at 0.085 m from the inlet of the geometry for both case studies and compare. You can use the plot over line tool for this.</li>
