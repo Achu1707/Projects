@@ -11,7 +11,7 @@
 </ol>
 <p><strong>Boundary condition specification</strong></p>
 <p>The domain specifications are provided in the following figure.</p>
-![img0](https://github.com/Achu1707/Skill-lync-project/assets/150841023/420f1d9b-9d9c-4dcc-9129-21368b743b15)
+<p><img src="https://github.com/Achu1707/Projects/blob/main/img0.jpg?raw=true"></p>
 
 <p><strong>Desired output</strong></p>
 <ul>
