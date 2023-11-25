@@ -246,7 +246,7 @@ runTimeModifiable true;
 
 
 // ************************************************************************* //</code></pre>
-<p>Inlet pressure and velocity</p>
+<p><strong>Inlet pressure and velocity</strong></p>
 <p>cd.. was used to get back to cavity_test folder. Then 0 folder was selected. Inside it has two files :p(Pressure) and U (velocity).</p>
 <p>1) First I opended p file. Then I gave the values as below,</p>
 <p>&nbsp;</p>
