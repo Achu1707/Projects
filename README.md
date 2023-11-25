@@ -20,7 +20,6 @@
 <p>&nbsp;</p>
 <p><strong>Answer</strong></p>
 <p>In the question it is clearly mentioned to simulate an<u> incompressible-laminar-viscous flow</u> through the backward facing step geometry where the simulation should be <u>transient</u>. So the suitable solver will be <strong>icoFoam</strong>. I selected this solver based on information given in the <a href="https://www.openfoam.com/documentation/user-guide/a-reference/a.1-standard-solvers" target="_blank" rel="noopener">Openfoam website</a> .</p>
-![1](https://github.com/Achu1707/Skill-lync-project/assets/150841023/397ca11c-04b3-45a6-8302-adda68f98b84)
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Fig 1. Solver selection</em></p>
 <p><strong>Procedure</strong></p>
