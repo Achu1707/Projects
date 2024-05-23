@@ -1,0 +1,2 @@
+## Developed a 3D Model of Quad sphere for a fluid region in Solidworks. Quad sphere consists of a cube surrounded by curved parts on all its faces. It was imported in STAR-CCM+ to carry out fluid sloshing simulation. Results (see Forces pic) obtained by simulating with Quad sphere with Quad mesh are in good agreement with the experiment than other ones
+## This work was part of my Research project: Numerical Reproduction of Experimental Fluid Sloshing under Microgravity Conditions using STAR-CCM+ : https://shorturl.at/BCKOT
