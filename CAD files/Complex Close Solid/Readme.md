@@ -1,1 +1,1 @@
-
+## Complex Close Solid developed using Part Design in Catia-V5 using boolean operation: Remove instead of Pocket command as per company standards, during Internship at Macbro Technologies India Pvt. Ltd
